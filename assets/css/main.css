@@ -1,0 +1,14 @@
+@theme {
+  --breakpoint-xs: 24rem;
+  --breakpoint-sm: 32rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 81.25rem;
+  --breakpoint-2xl: 100rem;
+
+  --color-black: #12130f;
+  --color-green: #5b9279;
+  --color-lime: #8fcb9b;
+  --color-white: #eae6e5;
+  --color-brown: #8f8073;
+}
