@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "IMFellEnglish";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/IMFellEnglish/IMFellEnglish-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IMFellEnglish";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/IMFellEnglish/IMFellEnglish-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TenaliRamakrishna";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/TenaliRamakrishna/TenaliRamakrishna-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
