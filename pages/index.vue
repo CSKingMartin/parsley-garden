@@ -1,15 +1,21 @@
 <template>
   <div>
-    <h1 class="header-1">I love zen gardens</h1>
-    <h2 class="header-2">I love zen gardens</h2>
-    <h3 class="header-3">I love zen gardens</h3>
-    <h4 class="header-4">I love zen gardens</h4>
-    <h5 class="header-5">I love zen gardens</h5>
-    <p class="paragraph-lg">I love zen gardens</p>
-    <p class="paragraph">I love zen gardens</p>
-    <p class="paragraph-sm">I love zen gardens</p>
+    <GraphicText>PARSLEY GARDEN</GraphicText>
+    <p class="text-white font-notokufi font-light header-3 text-center py-xl">
+      The Internet has grown into a vast, deep, and tangled web. Here is a place
+      to rest your feet! This site is to be a zen garden; the free space on the
+      board. Welcome! My name is Conner Parsley, a professional web developer
+      and "gardener." and this is my collection of curated work, thoughts, and
+      projects.
+    </p>
+    <ProjectGrid />
+    <p class="text-white font-notokufi font-light header-3 text-center py-xl">
+      The Internet has grown into a vast, deep, and tangled web. Here is a place
+      to rest your feet! This site is to be a zen garden; the free space on the
+      board. Welcome! My name is Conner Parsley and this is my collection of
+      curated work, thoughts, and projects.
+    </p>
   </div>
-  <ProjectGrid />
 </template>
 <script lang="ts" setup>
 pageMeta({

@@ -21,6 +21,13 @@
 }
 
 @font-face {
+  font-family: "NotoKufi";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/NotoKufi/NotoKufiArabic-Variable.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: normal;

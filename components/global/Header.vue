@@ -1,8 +1,11 @@
 <template>
   <header class="w-full">
-    <div class="max-w-container mx-auto px-lg py-xs flex justify-center">
+    <NuxtLink
+      to="/"
+      class="max-w-container mx-auto px-lg py-xs flex justify-center"
+    >
       <SvgLogo class="h-2xl" />
-    </div>
+    </NuxtLink>
   </header>
 </template>
 <script lang="ts" setup>

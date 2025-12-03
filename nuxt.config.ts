@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   compatibilityDate: "2025-07-15",
   components: {
     dirs: [
@@ -26,8 +29,10 @@ export default defineNuxtConfig({
           white: "var(--color-white)",
         },
         fontFamily: {
-          display: "TenaliRamakirshna",
-          sans: "IMFellEnglish",
+          serif: "IMFellEnglish",
+          ubuntu: "Ubuntu",
+          noto: "NotoKufi",
+          tenali: "TenaliRamakrishna",
         },
         spacing: {
           container: "90rem",
