@@ -27,6 +27,13 @@ export default defineNuxtConfig({
           green: "var(--color-green)",
           lime: "var(--color-lime)",
           white: "var(--color-white)",
+          shamrock: "var(--color-shamrock)",
+          terracotta: "var(--color-terracotta)",
+          yellow: "var(--color-yellow)",
+          blue: "var(--color-blue)",
+          grape: "var(--color-grape)",
+          camel: "var(--color-camel)",
+          pink: "var(--color-pink)",
         },
         fontFamily: {
           serif: "IMFellEnglish",

@@ -10,3 +10,13 @@
 .page-leave-to {
   opacity: 0;
 }
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(var(--reveal-offset));
+}
+
+.reveal-children-init [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-offset));
+}

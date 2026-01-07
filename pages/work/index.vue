@@ -1,5 +1,39 @@
 <template>
-  <div>I am a work landing page!</div>
+  <div>
+    <h1 class="header-1 uppercase font-tenali">Work</h1>
+    <p class="paragraph-lg">
+      I have worked across a variety of web agencies over the years. In between
+      each studio I have also done a share of contracting, either to get to know
+      agencies to determine a good fit or just to lend a hand. I am proud of all
+      my work. Here I have a showcase of just a slice of my web presence.
+    </p>
+    <ProjectGrid>
+      <ProjectCard
+        top="SERA"
+        url="sera"
+        heading="Architects"
+        company="FINE Design"
+      />
+      <ProjectCard
+        top="IEM"
+        url="iem"
+        heading="Industrial Electric Mfg"
+        company="FINE Design"
+      />
+      <ProjectCard
+        top="GFF"
+        url="gff"
+        heading="Gray Family Foundation"
+        company="Studio Rover"
+      />
+      <ProjectCard
+        top="Spectrum"
+        heading="Equity"
+        url="spectrum"
+        company="FINE Design"
+      />
+    </ProjectGrid>
+  </div>
 </template>
 <script lang="ts" setup>
 pageMeta({

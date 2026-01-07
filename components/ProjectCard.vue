@@ -3,25 +3,27 @@
     @click="onClick()"
     :to="`/work/${url}`"
     :class="state.active && 'active'"
-    class="project-card text-black overflow-visible"
+    class="project-card aspect-[.7/1] text-black overflow-visible"
   >
-    <div class="px-xs py-md text-center flex flex-col justify-between h-full">
+    <div class="p-xs text-center flex flex-col justify-between h-full">
       <h3>
         <template v-if="top"
-          ><span class="paragraph font-bold">{{ top }}</span
+          ><span class="paragraph-lg font-bold">{{ top }}</span
           ><br
         /></template>
-        <span class="header-4 uppercase font-bold">{{ heading }}</span>
+        <span class="header-3 leading-[1] uppercase font-bold">{{
+          heading
+        }}</span>
       </h3>
-      <div class="mt-2xl">
-        <div
+      <div>
+        <!-- <div
           class="relative aspect-square w-[0] overflow-visible my-xs mx-auto"
         >
           <div
             class="portal rounded-full bg-black aspect-square w-3xl -translate-x-1/2 -translate-y-1/2 absolute"
           ></div>
-        </div>
-        <p class="paragraph font-serif mt-2xl">with {{ company }}</p>
+        </div> -->
+        <p class="paragraph font-serif">with {{ company }}</p>
         <div class="flex mt-xs justify-center items-center gap-3xs">
           <div class="rounded-full bg-black w-xs aspect-square"></div>
           <div class="rounded-full bg-black w-xs aspect-square"></div>
@@ -49,16 +51,16 @@ function onClick() {
 </script>
 <style lang="postcss" scoped>
 .project-card {
-  background: var(--color-white);
+  /* background: var(--color-white); */
   border-radius: 4px;
 
-  &:hover {
+  /* &:hover {
     background: linear-gradient(
       to right bottom,
       var(--color-lime),
       var(--color-green)
     );
-  }
+  } */
 
   .portal {
   }
