@@ -4,7 +4,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Doing something with nuxtApp
   nuxtApp.vueApp.directive("reveal", {
     beforeMount(el, binding) {
-      el.classList.add("opacity-0");
+      el.style.opacity = 0;
+      // el.classList.add("opacity-0");
       let deep, delay, offset, duration;
 
       if (binding.value) {
@@ -19,47 +20,46 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
 
       // switch targeting process for deep vs regular
-      if (deep) {
-        console.log("the deeep");
-        el.classList.add("reveal-children-init");
-        el.style.setProperty(
-          "--reveal-offset",
-          binding.value?.offset ?? "1.25rem"
-        );
-
-        el.querySelectorAll("[data-reveal]").forEach((node, index) => {
-          if (node instanceof HTMLElement) {
-            node.style.opacity = "0";
-
-            nextTick(() => {
-              if (binding.value?.horizontal === true) {
-                node.style.transform = `translateX(${offset})`;
-              } else {
-                node.style.transform = `translateY(${offset})`;
-              }
-
-              node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
-
-              node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
-
-              if (duration) {
-                node.style.transitionDuration = `${duration}ms`;
-              }
-            });
-          }
-        });
-      } else {
-        el.classList.add("opacity-0");
-        el.classList.add("transition-all");
-        el.classList.add("duration-1000");
-        el.classList.add("motion-reduce:transition-none");
-        el.classList.add("motion-reduce:opacity-1");
-        el.classList.add("motion-reduce:translate-y-0");
-
-        // styles based on options
-        el.style.transitionDelay = `${delay}ms`;
-        el.classList.add(`tranlate-y-[${offset}em]`);
-      }
+      // if (deep) {
+      //   console.log("the deeep");
+      //   // el.classList.add("opacity-0");
+      //   el.classList.add("reveal-children-init");
+      //   el.style.setProperty(
+      //     "--reveal-offset",
+      //     binding.value?.offset ?? "1.25rem"
+      //   );
+      //
+      //   el.querySelectorAll("[data-reveal]").forEach((node, index) => {
+      //     if (node instanceof HTMLElement) {
+      //       nextTick(() => {
+      //         if (binding.value?.horizontal === true) {
+      //           node.style.transform = `translateX(${offset})`;
+      //         } else {
+      //           node.style.transform = `translateY(${offset})`;
+      //         }
+      //
+      //         // node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
+      //
+      //         // node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
+      //
+      //         if (duration) {
+      //           node.style.transitionDuration = `${duration}ms`;
+      //         }
+      //       });
+      //     }
+      //   });
+      // } else {
+      //   el.classList.add("opacity-0");
+      //   el.classList.add("transition-all");
+      //   el.classList.add("duration-1000");
+      //   el.classList.add("motion-reduce:transition-none");
+      //   el.classList.add("motion-reduce:opacity-1");
+      //   el.classList.add("motion-reduce:translate-y-0");
+      //
+      //   // styles based on options
+      //   el.style.transitionDelay = `${delay}ms`;
+      //   el.classList.add(`tranlate-y-[${offset}em]`);
+      // }
     },
     mounted(el, binding) {
       let threshold = 0.1;
@@ -73,15 +73,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootMargin: "0px",
         threshold,
       };
-
-      let offsetClass = binding.value?.offset
-        ? `translate-y-[${binding.value?.offset}em]`
-        : "translate-y-[1.25em]";
+      //
+      // let offsetClass = binding.value?.offset
+      //   ? `translate-y-[${binding.value?.offset}em]`
+      //   : "translate-y-[1.25em]";
 
       let observer = new IntersectionObserver((e) => {
         if (e[0] && e[0].isIntersecting) {
-          el.classList.remove("opacity-0");
-          el.classList.remove(offsetClass);
+          // el.classList.remove("opacity-0");
+          // el.classList.remove(offsetClass);
           setTimeout(() => {
             el.classList.remove("duration-1000");
             el.style.transitionDelay = "0ms";
