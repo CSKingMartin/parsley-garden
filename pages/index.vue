@@ -1,13 +1,10 @@
 <template>
   <div>
-    <GraphicText
-      ><h1>
-        <span aria-hidden>PAR</span><span aria-hidden>SLEY</span>
-        <span aria-hidden>GAR</span><span aria-hidden>DEN</span>
-        <span class="sr-only">Parsley Garden</span>
-      </h1></GraphicText
+    <GraphicText />
+    <p
+      v-reveal
+      class="text-white font-notokufi font-light header-3 text-center py-xl"
     >
-    <p class="text-white font-notokufi font-light header-3 text-center py-xl">
       The Internet has grown into a vast, deep, and tangled web. Here is a place
       to rest your feet! This site is to be a zen garden; the free space on the
       board. Welcome! My name is Conner Parsley, a professional web developer

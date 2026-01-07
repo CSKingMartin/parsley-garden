@@ -4,8 +4,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Doing something with nuxtApp
   nuxtApp.vueApp.directive("reveal", {
     beforeMount(el, binding) {
-      el.style.opacity = 0;
-      // el.classList.add("opacity-0");
+      // el.style.opacity = 0;
+      el.classList.add("opacity-0");
       let deep, delay, offset, duration;
 
       if (binding.value) {
@@ -20,10 +20,24 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
 
       // switch targeting process for deep vs regular
-      // if (deep) {
-      //   console.log("the deeep");
-      //   // el.classList.add("opacity-0");
-      //   el.classList.add("reveal-children-init");
+      if (!deep) {
+        console.log("shallow");
+        // el.classList.add("opacity-0");
+        el.classList.add("transition-all");
+        el.classList.add("duration-1000");
+        el.classList.add("motion-reduce:transition-none");
+        el.classList.add("motion-reduce:opacity-1");
+        el.classList.add("motion-reduce:translate-y-0");
+
+        // styles based on options
+        el.style.transitionDelay = `${delay}ms`;
+        el.classList.add(`tranlate-y-[${offset}em]`);
+      } else {
+        console.log("deep");
+        el.classList.add("reveal-children-init");
+      }
+
+      // el.classList.add("opacity-0");
       //   el.style.setProperty(
       //     "--reveal-offset",
       //     binding.value?.offset ?? "1.25rem"
@@ -49,16 +63,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       //     }
       //   });
       // } else {
-      //   el.classList.add("opacity-0");
-      //   el.classList.add("transition-all");
-      //   el.classList.add("duration-1000");
-      //   el.classList.add("motion-reduce:transition-none");
-      //   el.classList.add("motion-reduce:opacity-1");
-      //   el.classList.add("motion-reduce:translate-y-0");
-      //
-      //   // styles based on options
-      //   el.style.transitionDelay = `${delay}ms`;
-      //   el.classList.add(`tranlate-y-[${offset}em]`);
       // }
     },
     mounted(el, binding) {
@@ -80,10 +84,10 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       let observer = new IntersectionObserver((e) => {
         if (e[0] && e[0].isIntersecting) {
-          // el.classList.remove("opacity-0");
+          el.classList.remove("opacity-0");
           // el.classList.remove(offsetClass);
           setTimeout(() => {
-            el.classList.remove("duration-1000");
+            // el.classList.remove("duration-1000");
             el.style.transitionDelay = "0ms";
           }, 1000);
           observer.disconnect();
