@@ -67,24 +67,33 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     mounted(el, binding) {
       let threshold = 0.1;
+      let deep = false;
+      let duration;
+      let offset = "1rem";
+      let delay = 500; // in milliseconds
+
+      console.log(binding.value);
+
       if (binding.value) {
         let { threshold: customThreshold } = binding.value;
         if (customThreshold) {
           threshold = customThreshold;
         }
+        deep = binding.value.deep;
+        duration = binding.value.duration || 1000;
       }
       let options = {
         rootMargin: "0px",
         threshold,
       };
       // check type
-      let deep = binding.value;
 
       if (deep) {
         console.log("search the deep");
         el.querySelectorAll("[data-reveal]").forEach((node, index) => {
           if (node instanceof HTMLElement) {
             nextTick(() => {
+              console.log(node);
               if (binding.value?.horizontal === true) {
                 node.style.transform = `translateX(${offset})`;
               } else {
@@ -94,10 +103,7 @@ export default defineNuxtPlugin((nuxtApp) => {
               node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
 
               node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
-
-              if (duration) {
-                node.style.transitionDuration = `${duration}ms`;
-              }
+              node.style.transitionDuration = `${duration}ms`;
             });
           }
         });
@@ -110,8 +116,14 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       let observer = new IntersectionObserver((e) => {
         if (e[0] && e[0].isIntersecting) {
-          el.classList.remove("opacity-0");
-          el.classList.remove("reveal-children-init");
+          setTimeout(() => {
+            el.classList.remove("opacity-0");
+            el.classList.remove("reveal-children-init");
+
+            setTimeout(() => {
+              el.classList.remove("duration-1000");
+            }, 100);
+          }, 1000);
 
           observer.disconnect();
         }
