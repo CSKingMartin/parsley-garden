@@ -66,7 +66,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       // }
     },
     mounted(el, binding) {
-      let threshold = 0.5;
+      let threshold = 0.1;
       let deep = false;
       let duration;
       let offset = "1rem";
