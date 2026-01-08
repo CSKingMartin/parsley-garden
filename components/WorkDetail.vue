@@ -29,7 +29,7 @@
           <slot />
           <div class="py-md flex flex-col items-start max-md:hidden">
             <a
-              :class="`bg-${color} border-${color} hover:text-${color}`"
+              :class="`bg-${color} border-${color}-500 hover:text-${color}`"
               class="button"
               href="https://www.seradesign.com/"
               >Visit {{ top }} {{ heading }}</a

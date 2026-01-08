@@ -1,14 +1,11 @@
 <template>
   <div>
     <GraphicText />
-    <p
-      v-reveal
-      class="text-white font-notokufi font-light header-3 text-center py-xl"
-    >
+    <p v-reveal class="font-serif font-light header-3 text-center py-xl">
       The Internet has grown into a vast, deep, and tangled web. Here is a place
       to rest your feet! This site is to be a zen garden; the free space on the
       board. Welcome! My name is Conner Parsley, a professional web developer
-      and "gardener." and this is my collection of curated work, thoughts, and
+      and gardener. and this is my collection of curated work, thoughts, and
       projects.
     </p>
     <ProjectGrid v-reveal="{ deep: true }">
@@ -43,11 +40,8 @@
         />
       </NuxtLink>
     </ProjectGrid>
-    <p class="text-white font-notokufi font-light header-3 text-center py-xl">
-      The Internet has grown into a vast, deep, and tangled web. Here is a place
-      to rest your feet! This site is to be a zen garden; the free space on the
-      board. Welcome! My name is Conner Parsley and this is my collection of
-      curated work, thoughts, and projects.
+    <p class="font-serif huge font-light header-2 text-center py-xl">
+      “You can't blossom if you keep growing gardens out of weeds” - Beach Bunny
     </p>
   </div>
 </template>

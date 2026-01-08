@@ -1,10 +1,10 @@
 <template>
   <footer
     :class="color ? `bg-${color}` : 'bg-shamrock'"
-    class="h-screen w-screen"
+    class="h-screen w-screen flex flex-col"
   >
     <div
-      class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-lg h-[calc(100vh-300px)]"
+      class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-lg grow"
     >
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/work">Work</NuxtLink>
