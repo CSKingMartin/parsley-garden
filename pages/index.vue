@@ -14,7 +14,7 @@
     <ProjectGrid v-reveal="{ deep: true }">
       <NuxtLink to="/work/sera">
         <ProjectCard
-          class="bg-terracotta"
+          class="bg-terracotta hover:scale-[1.05] duration-[.3s]"
           top="SERA"
           url="sera"
           heading="Architects"
@@ -24,7 +24,7 @@
       </NuxtLink>
       <NuxtLink to="/work/iem">
         <ProjectCard
-          class="bg-red"
+          class="bg-red hover:scale-[1.05] duration-[.3s]"
           top="IEM"
           url="iem"
           heading="Industrial Electric Mfg"
@@ -34,7 +34,7 @@
       </NuxtLink>
       <NuxtLink to="/work/gff">
         <ProjectCard
-          class="bg-blue"
+          class="bg-blue hover:scale-[1.05] duration-[.3s]"
           top="GFF"
           url="gff"
           heading="Gray Family Foundation"

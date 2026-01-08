@@ -2,8 +2,8 @@
   <div class="project-card aspect-[.7/1] text-black overflow-visible">
     <div class="p-xs text-center flex flex-col justify-between h-full">
       <h3>
-        <template v-if="top"
-          ><span class="paragraph-lg font-bold">{{ top }}</span
+        <template v-if="top || abbv"
+          ><span class="paragraph-lg font-bold">{{ top }}{{ abbv }}</span
           ><br
         /></template>
         <span class="header-3 leading-[1] uppercase font-bold">{{
@@ -31,6 +31,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   top?: string;
+  abbv?: string;
   heading: string;
   company: string;
   url?: string;

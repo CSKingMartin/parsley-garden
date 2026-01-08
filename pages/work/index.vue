@@ -10,6 +10,7 @@
     <ProjectGrid>
       <NuxtLink to="/work/sera">
         <ProjectCard
+          class="hover:scale-125"
           top="SERA"
           url="sera"
           heading="Architects"

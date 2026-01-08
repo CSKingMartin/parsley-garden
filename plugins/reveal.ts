@@ -23,7 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (!deep) {
         console.log("shallow");
         // el.classList.add("opacity-0");
-        el.classList.add("transition-all");
+        el.classList.add("transition-opacity");
         el.classList.add("duration-1000");
         el.classList.add("motion-reduce:transition-none");
         el.classList.add("motion-reduce:opacity-1");
@@ -31,7 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         // styles based on options
         el.style.transitionDelay = `${delay}ms`;
-        el.classList.add(`tranlate-y-[${offset}em]`);
+        // el.classList.add(`tranlate-y-[${offset}em]`);
       } else {
         console.log("deep");
         el.classList.add("reveal-children-init");
@@ -66,7 +66,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       // }
     },
     mounted(el, binding) {
-      let threshold = 0.1;
+      let threshold = 0.5;
       let deep = false;
       let duration;
       let offset = "1rem";
@@ -92,9 +92,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         el.querySelectorAll("[data-reveal]").forEach((node, index) => {
           if (node instanceof HTMLElement) {
             if (binding.value?.horizontal === true) {
-              node.style.transform = `translateX(${offset})`;
+              // node.style.transform = `translateX(${offset})`;
             } else {
-              node.style.transform = `translateY(${offset})`;
+              // node.style.transform = `translateY(${offset})`;
             }
 
             node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
@@ -115,17 +115,23 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       let observer = new IntersectionObserver((e) => {
         if (e[0] && e[0].isIntersecting) {
-          let timer = deep
-            ? el.querySelectorAll("[data-reveal]").length * 2000
-            : 100;
-
           setTimeout(() => {
             el.classList.remove("opacity-0");
             el.classList.remove("reveal-children-init");
 
-            const count = el.query;
+            // if (!deep) {
+            setTimeout(() => {
+              el.classList.remove("duration-1000");
 
-            console.log(timer);
+              if (deep) {
+                el.querySelectorAll("[data-reveal]").forEach((node, index) => {
+                  if (node instanceof HTMLElement) {
+                    node.style.transitionDuration = "";
+                  }
+                });
+              }
+            }, 1000);
+            // }
 
             // setTimeout(() => {
             //   if (!deep) {

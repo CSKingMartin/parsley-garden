@@ -23,7 +23,7 @@
       },
     ]"
     color="blue"
-    top="GFF"
+    abbv="GFF"
     heading="Gray Family Foundation"
     company="Studio Rover"
   >

@@ -19,7 +19,7 @@
       },
     ]"
     color="red"
-    top="IEM"
+    abbv="IEM"
     heading="Industrial Electric Mfg"
     company="FINE Design"
   >
