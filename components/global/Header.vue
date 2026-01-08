@@ -4,12 +4,19 @@
       to="/"
       class="max-w-container mx-auto px-lg py-xs flex justify-center"
     >
-      <SvgLogo class="h-2xl" />
+      <SvgLogo
+        :class="`text-${color}`"
+        class="h-2xl transition-all duration-500"
+      />
     </NuxtLink>
   </header>
 </template>
 <script lang="ts" setup>
-onMounted(() => {
-  console.log("header mounted");
+import { useGlobalStore } from "~/stores";
+
+const globalStore = useGlobalStore();
+
+const color = computed(() => {
+  return globalStore.color;
 });
 </script>

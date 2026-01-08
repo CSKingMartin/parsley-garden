@@ -15,7 +15,6 @@
     </div>
     <ProjectSpread
       class="pb-xl py-sm flex gap-sm flex-wrap justify-center items-start relative w-screen"
-      v-reveal="{ deep: true }"
     >
       <ProjectCard
         class="bg-terracotta hover:scale-[1.05] duration-[.3s]"
@@ -46,7 +45,8 @@
 
       <ProjectCard
         class="bg-shamrock hover:scale-[1.05] duration-[.3s]"
-        heading="Spectrum Equity"
+        top="SPECTRUM"
+        heading="Equity"
         url="spectrum"
         company="FINE Design"
       />
@@ -55,6 +55,7 @@
         class="bg-grape hover:scale-[1.05] duration-[.3s]"
         top="Lead Edge"
         heading="Capital"
+        url="ledge"
         company="FINE Design"
       />
     </ProjectSpread>
@@ -64,6 +65,14 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { useGlobalStore } from "~/stores";
+
+const globalStore = useGlobalStore();
+
+onMounted(() => {
+  globalStore.color = "shamrock";
+});
+
 pageMeta({
   title: "Parsley Garden",
   description: "I love zen gardens",

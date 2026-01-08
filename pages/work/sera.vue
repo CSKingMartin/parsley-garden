@@ -41,6 +41,12 @@
   </WorkDetail>
 </template>
 <script lang="ts" setup>
+import { useGlobalStore } from "~/stores";
+
+const globalStore = useGlobalStore();
+
+globalStore.color = "terracotta";
+
 pageMeta({
   title: "Parsley Garden | SERA Architects",
   description: "Internet gardens built by Conner Parsley",

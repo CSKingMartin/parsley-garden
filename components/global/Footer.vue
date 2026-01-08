@@ -1,7 +1,7 @@
 <template>
   <footer
     :class="color ? `bg-${color}` : 'bg-shamrock'"
-    class="h-screen w-screen flex flex-col"
+    class="h-screen w-screen flex flex-col transition-all"
   >
     <div
       class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-lg grow"
@@ -19,7 +19,11 @@
   </footer>
 </template>
 <script lang="ts" setup>
-const props = defineProps<{
-  color?: string;
-}>();
+import { useGlobalStore } from "~/stores/";
+
+const globalStore = useGlobalStore();
+
+const color = computed(() => {
+  return globalStore.color;
+});
 </script>

@@ -33,3 +33,10 @@
     </p>
   </WorkDetail>
 </template>
+<script lang="ts" setup>
+import { useGlobalStore } from "~/stores";
+
+const globalStore = useGlobalStore();
+
+globalStore.color = "red";
+</script>
