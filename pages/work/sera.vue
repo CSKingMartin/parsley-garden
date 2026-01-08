@@ -26,6 +26,7 @@
     top="SERA"
     heading="Architects"
     company="FINE Design"
+    url="https://www.seradesign.com/"
   >
     <p class="text-terracotta">
       SERA Architects design library had a palette of fun, contrasting colors
@@ -39,3 +40,9 @@
     </p>
   </WorkDetail>
 </template>
+<script lang="ts" setup>
+pageMeta({
+  title: "Parsley Garden | SERA Architects",
+  description: "Internet gardens built by Conner Parsley",
+});
+</script>

@@ -7,41 +7,49 @@
       agencies to determine a good fit or just to lend a hand. I am proud of all
       my work. Here I have a showcase of just a slice of my web presence.
     </p>
-    <ProjectGrid>
-      <NuxtLink to="/work/sera">
-        <ProjectCard
-          class="hover:scale-125"
-          top="SERA"
-          url="sera"
-          heading="Architects"
-          company="FINE Design"
-        />
-      </NuxtLink>
-      <NuxtLink to="/work/iem/">
-        <ProjectCard
-          top="IEM"
-          url="iem"
-          heading="Industrial Electric Mfg"
-          company="FINE Design"
-        />
-      </NuxtLink>
-      <NuxtLink to="/work/gff/">
-        <ProjectCard
-          top="GFF"
-          url="gff"
-          heading="Gray Family Foundation"
-          company="Studio Rover"
-        />
-      </NuxtLink>
-      <NuxtLink to="/work/spectrum/">
-        <ProjectCard
-          top="Spectrum"
-          heading="Equity"
-          url="spectrum"
-          company="FINE Design"
-        />
-      </NuxtLink>
-    </ProjectGrid>
+    <div class="flex gap-sm py-md pb-xl">
+      <div class="shrink">
+        <NuxtLink to="/work/sera">
+          <ProjectCard
+            class="hover:scale-125"
+            top="SERA"
+            url="sera"
+            heading="Architects"
+            company="FINE Design"
+          />
+        </NuxtLink>
+      </div>
+      <div class="shrink">
+        <NuxtLink to="/work/iem/">
+          <ProjectCard
+            top="IEM"
+            url="iem"
+            heading="Industrial Electric Mfg"
+            company="FINE Design"
+          />
+        </NuxtLink>
+      </div>
+      <div class="shrink">
+        <NuxtLink to="/work/gff/">
+          <ProjectCard
+            top="GFF"
+            url="gff"
+            heading="Gray Family Foundation"
+            company="Studio Rover"
+          />
+        </NuxtLink>
+      </div>
+      <div class="shrink">
+        <NuxtLink to="/work/spectrum/">
+          <ProjectCard
+            top="Spectrum"
+            heading="Equity"
+            url="spectrum"
+            company="FINE Design"
+          />
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>

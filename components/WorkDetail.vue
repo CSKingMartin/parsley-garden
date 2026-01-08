@@ -6,7 +6,7 @@
       <!-- COLUMN 1 -->
       <div
         ref="sticky-block"
-        class="md:top-xl md:sticky bg-black md:h-[calc(100vh-var(--space-3xl))] py-xl md:py-[0] flex flex-col w-full"
+        class="md:top-xl md:sticky bg-black md:h-[calc(100vh-var(--space-3xl))] md:py-xl md:py-[0] flex flex-col w-full"
       >
         <div class="md:absolute w-full">
           <ProjectCard
@@ -21,17 +21,17 @@
         </div>
         <div
           :class="`text-${color}`"
-          class="max-md:my-auto relative bg-black text-panel md:p-sm md:mt-xl"
+          class="max-md:my-auto max-md:mt-lg relative bg-black text-panel md:p-sm md:mt-xl"
         >
           <h1 class="uppercase font-bold font-sans header-3 mb-xs">
             {{ top }} {{ heading }}
           </h1>
           <slot />
-          <div class="py-md flex flex-col items-start max-md:hidden">
+          <div v-if="url" class="py-md flex flex-col items-start max-md:hidden">
             <a
               :class="`bg-${color} border-${color}-500 hover:text-${color}`"
               class="button"
-              href="https://www.seradesign.com/"
+              :href="url"
               >Visit {{ top }} {{ heading }}</a
             >
             <button class="mt-sm underline" @click="goBack()">Go back!</button>
@@ -51,10 +51,8 @@
           <img v-reveal class="mt-lg" :src="image.src" :alt="image.alt" />
         </template>
       </div>
-      <div class="py-md flex flex-col items-start md:hidden w-full">
-        <a class="button" href="https://www.seradesign.com/"
-          >Visit {{ company }}</a
-        >
+      <div v-if="url" class="py-md flex flex-col items-start md:hidden w-full">
+        <a class="button" :href="url">Visit {{ top }} {{ heading }}</a>
         <button class="mt-sm underline" @click="goBack()">Go back!</button>
       </div>
     </div>
@@ -67,6 +65,7 @@ const props = defineProps<{
   abbv?: string;
   heading: string;
   company: string;
+  url?: string;
   images: {
     src: String;
     alt: String;
