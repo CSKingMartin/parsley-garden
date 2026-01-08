@@ -89,21 +89,20 @@ export default defineNuxtPlugin((nuxtApp) => {
       // check type
 
       if (deep) {
-        console.log("search the deep");
         el.querySelectorAll("[data-reveal]").forEach((node, index) => {
           if (node instanceof HTMLElement) {
+            if (binding.value?.horizontal === true) {
+              node.style.transform = `translateX(${offset})`;
+            } else {
+              node.style.transform = `translateY(${offset})`;
+            }
+
+            node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
+
+            node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
+            node.style.transitionDuration = `${duration}ms`;
             nextTick(() => {
               console.log(node);
-              if (binding.value?.horizontal === true) {
-                node.style.transform = `translateX(${offset})`;
-              } else {
-                node.style.transform = `translateY(${offset})`;
-              }
-
-              node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
-
-              node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
-              node.style.transitionDuration = `${duration}ms`;
             });
           }
         });
@@ -116,13 +115,38 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       let observer = new IntersectionObserver((e) => {
         if (e[0] && e[0].isIntersecting) {
+          let timer = deep
+            ? el.querySelectorAll("[data-reveal]").length * 2000
+            : 100;
+
           setTimeout(() => {
             el.classList.remove("opacity-0");
             el.classList.remove("reveal-children-init");
 
+            const count = el.query;
+
+            console.log(timer);
+
             setTimeout(() => {
-              el.classList.remove("duration-1000");
-            }, 100);
+              if (!deep) {
+                el.classList.remove("duration-1000");
+              } else {
+                el.querySelectorAll("[data-reveal]").forEach((node, index) => {
+                  if (node instanceof HTMLElement) {
+                    if (binding.value?.horizontal === true) {
+                      // node.style.transform = "";
+                    } else {
+                      // node.style.transform = "";
+                    }
+
+                    // node.style.transition = "";
+
+                    // node.style.transitionDelay = "";
+                    // node.style.transitionDuration = "";
+                  }
+                });
+              }
+            }, timer);
           }, 1000);
 
           observer.disconnect();

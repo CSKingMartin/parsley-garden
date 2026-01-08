@@ -11,13 +11,14 @@
       and "gardener." and this is my collection of curated work, thoughts, and
       projects.
     </p>
-    <ProjectGrid>
+    <ProjectGrid v-reveal="{ deep: true }">
       <ProjectCard
         class="bg-camel"
         top="SERA"
         url="sera"
         heading="Architects"
         company="FINE Design"
+        data-reveal
       />
       <ProjectCard
         class="bg-terracotta"
@@ -25,6 +26,7 @@
         url="iem"
         heading="Industrial Electric Mfg"
         company="FINE Design"
+        data-reveal
       />
       <ProjectCard
         class="bg-blue"
@@ -32,6 +34,7 @@
         url="gff"
         heading="Gray Family Foundation"
         company="Studio Rover"
+        data-reveal
       />
     </ProjectGrid>
     <p class="text-white font-notokufi font-light header-3 text-center py-xl">
