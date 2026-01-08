@@ -70,7 +70,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       let deep = false;
       let duration;
       let offset = "1rem";
-      let delay = 500; // in milliseconds
+      let delay = 100; // in milliseconds
 
       console.log(binding.value);
 
@@ -99,7 +99,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
 
-            node.style.transitionDelay = `${(delay ?? 275) * index}ms`;
+            node.style.transitionDelay = `${(delay ?? 100) * index}ms`;
             node.style.transitionDuration = `${duration}ms`;
             nextTick(() => {
               console.log(node);
@@ -127,27 +127,27 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             console.log(timer);
 
-            setTimeout(() => {
-              if (!deep) {
-                el.classList.remove("duration-1000");
-              } else {
-                el.querySelectorAll("[data-reveal]").forEach((node, index) => {
-                  if (node instanceof HTMLElement) {
-                    if (binding.value?.horizontal === true) {
-                      // node.style.transform = "";
-                    } else {
-                      // node.style.transform = "";
-                    }
-
-                    // node.style.transition = "";
-
-                    // node.style.transitionDelay = "";
-                    // node.style.transitionDuration = "";
-                  }
-                });
-              }
-            }, timer);
-          }, 1000);
+            // setTimeout(() => {
+            //   if (!deep) {
+            //     el.classList.remove("duration-1000");
+            //   } else {
+            //     el.querySelectorAll("[data-reveal]").forEach((node, index) => {
+            //       if (node instanceof HTMLElement) {
+            //         if (binding.value?.horizontal === true) {
+            //           // node.style.transform = "";
+            //         } else {
+            //           // node.style.transform = "";
+            //         }
+            //
+            //         // node.style.transition = "";
+            //
+            //         // node.style.transitionDelay = "";
+            //         // node.style.transitionDuration = "";
+            //       }
+            //     });
+            //   }
+            // }, timer);
+          }, 100);
 
           observer.disconnect();
         }

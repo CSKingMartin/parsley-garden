@@ -12,30 +12,36 @@
       projects.
     </p>
     <ProjectGrid v-reveal="{ deep: true }">
-      <ProjectCard
-        class="bg-camel"
-        top="SERA"
-        url="sera"
-        heading="Architects"
-        company="FINE Design"
-        data-reveal
-      />
-      <ProjectCard
-        class="bg-terracotta"
-        top="IEM"
-        url="iem"
-        heading="Industrial Electric Mfg"
-        company="FINE Design"
-        data-reveal
-      />
-      <ProjectCard
-        class="bg-blue"
-        top="GFF"
-        url="gff"
-        heading="Gray Family Foundation"
-        company="Studio Rover"
-        data-reveal
-      />
+      <NuxtLink to="/work/sera">
+        <ProjectCard
+          class="bg-terracotta"
+          top="SERA"
+          url="sera"
+          heading="Architects"
+          company="FINE Design"
+          data-reveal
+        />
+      </NuxtLink>
+      <NuxtLink to="/work/iem">
+        <ProjectCard
+          class="bg-red"
+          top="IEM"
+          url="iem"
+          heading="Industrial Electric Mfg"
+          company="FINE Design"
+          data-reveal
+        />
+      </NuxtLink>
+      <NuxtLink to="/work/gff">
+        <ProjectCard
+          class="bg-blue"
+          top="GFF"
+          url="gff"
+          heading="Gray Family Foundation"
+          company="Studio Rover"
+          data-reveal
+        />
+      </NuxtLink>
     </ProjectGrid>
     <p class="text-white font-notokufi font-light header-3 text-center py-xl">
       The Internet has grown into a vast, deep, and tangled web. Here is a place

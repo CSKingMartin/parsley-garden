@@ -34,6 +34,7 @@ export default defineNuxtConfig({
           grape: "var(--color-grape)",
           camel: "var(--color-camel)",
           pink: "var(--color-pink)",
+          red: "var(--color-red)",
         },
         fontFamily: {
           serif: "IMFellEnglish",

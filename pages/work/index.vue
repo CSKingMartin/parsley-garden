@@ -8,30 +8,38 @@
       my work. Here I have a showcase of just a slice of my web presence.
     </p>
     <ProjectGrid>
-      <ProjectCard
-        top="SERA"
-        url="sera"
-        heading="Architects"
-        company="FINE Design"
-      />
-      <ProjectCard
-        top="IEM"
-        url="iem"
-        heading="Industrial Electric Mfg"
-        company="FINE Design"
-      />
-      <ProjectCard
-        top="GFF"
-        url="gff"
-        heading="Gray Family Foundation"
-        company="Studio Rover"
-      />
-      <ProjectCard
-        top="Spectrum"
-        heading="Equity"
-        url="spectrum"
-        company="FINE Design"
-      />
+      <NuxtLink to="/work/sera">
+        <ProjectCard
+          top="SERA"
+          url="sera"
+          heading="Architects"
+          company="FINE Design"
+        />
+      </NuxtLink>
+      <NuxtLink to="/work/iem/">
+        <ProjectCard
+          top="IEM"
+          url="iem"
+          heading="Industrial Electric Mfg"
+          company="FINE Design"
+        />
+      </NuxtLink>
+      <NuxtLink to="/work/gff/">
+        <ProjectCard
+          top="GFF"
+          url="gff"
+          heading="Gray Family Foundation"
+          company="Studio Rover"
+        />
+      </NuxtLink>
+      <NuxtLink to="/work/spectrum/">
+        <ProjectCard
+          top="Spectrum"
+          heading="Equity"
+          url="spectrum"
+          company="FINE Design"
+        />
+      </NuxtLink>
     </ProjectGrid>
   </div>
 </template>

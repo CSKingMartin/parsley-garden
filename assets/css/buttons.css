@@ -1,0 +1,25 @@
+.button {
+  background-color: var(--color-shamrock);
+  border-radius: 4px;
+  border: 1px solid;
+  color: var(--color-black);
+  display: inline-block;
+  font-size: var(--step--1);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s;
+  padding-bottom: var(--space-2xs);
+  padding-inline: var(--space-sm);
+  padding-top: var(--space-2xs);
+
+  &:hover {
+    background-color: var(--color-black);
+    border-color: currentcolor;
+    /* color: var(--color-shamrock); */
+  }
+}
+
+a {
+  text-decoration: underline;
+}

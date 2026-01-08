@@ -22,8 +22,12 @@
         alt: 'SERA Design Screenshot',
       },
     ]"
+    color="terracotta"
+    top="SERA"
+    heading="Architects"
+    company="FINE Design"
   >
-    <p>
+    <p class="text-terracotta">
       SERA Architects design library had a palette of fun, contrasting colors
       that we wanted to showcase throughout. To bring the full arrangement into
       focus we added features like the color of the fullscreen navigation

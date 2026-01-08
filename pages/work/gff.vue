@@ -22,9 +22,12 @@
         alt: 'SERA Design Screenshot',
       },
     ]"
+    color="blue"
+    top="GFF"
+    heading="Gray Family Foundation"
+    company="Studio Rover"
   >
-    <h1 class="header-1 uppercase font-tenali">Gray Family Foundation</h1>
-    <p>
+    <p class="text-blue">
       When Studio Rover invited me on to help build a new site for the Gray
       Family Foundation, I was asked to build the front-end and choose the
       technologies to my liking. In addition to helping Studio Rover achieve

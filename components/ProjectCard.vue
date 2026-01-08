@@ -1,10 +1,5 @@
 <template>
-  <NuxtLink
-    @click="onClick()"
-    :to="`/work/${url}`"
-    :class="state.active && 'active'"
-    class="project-card aspect-[.7/1] text-black overflow-visible"
-  >
+  <div class="project-card aspect-[.7/1] text-black overflow-visible">
     <div class="p-xs text-center flex flex-col justify-between h-full">
       <h3>
         <template v-if="top"
@@ -31,14 +26,14 @@
         </div>
       </div>
     </div>
-  </NuxtLink>
+  </div>
 </template>
 <script lang="ts" setup>
 const props = defineProps<{
   top?: string;
   heading: string;
   company: string;
-  url: string;
+  url?: string;
 }>();
 
 const state = reactive({
