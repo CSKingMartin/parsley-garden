@@ -1,23 +1,21 @@
 <template>
   <div class="flex flex-col items-center">
     <GraphicText />
-    <p v-reveal class="font-serif font-light header-3 text-center py-xl">
+    <p v-reveal class="font-sans header-4 font-bold text-center pt-lg pb-3xl">
       The Internet has grown into a vast, deep, and tangled web. Here is a place
       to rest your feet! This site is to be a zen garden; the free space on the
       board. Welcome! My name is Conner Parsley, a professional web developer
-      and gardener. and this is my collection of curated work, thoughts, and
+      and gardener. This is my collection of curated work, thoughts, and
       projects.
     </p>
-    <div class="py-md md:py-xl">
+    <div class="pt-3xl pb-md">
       <h2 class="font-sans font-bold header-2 text-center">
         FEATURED WORK AND PROJECTS
       </h2>
     </div>
-    <ProjectSpread
-      class="pb-xl py-sm flex gap-sm flex-wrap justify-center items-start relative w-screen"
-    >
+    <ProjectSpread class="pb-3xl relative w-screen">
       <ProjectCard
-        class="bg-terracotta hover:scale-[1.05] duration-[.3s]"
+        class="bg-terracotta"
         top="SERA"
         url="sera"
         heading="Architects"
@@ -26,7 +24,7 @@
       />
 
       <ProjectCard
-        class="bg-red hover:scale-[1.05] duration-[.3s]"
+        class="bg-red"
         top="IEM"
         url="iem"
         heading="Industrial Electric Mfg"
@@ -35,7 +33,7 @@
       />
 
       <ProjectCard
-        class="bg-blue hover:scale-[1.05] duration-[.3s]"
+        class="bg-blue"
         top="GFF"
         url="gff"
         heading="Gray Family Foundation"
@@ -43,8 +41,8 @@
         data-reveal
       />
 
-      <ProjectCard
-        class="bg-shamrock hover:scale-[1.05] duration-[.3s]"
+      <!-- <ProjectCard
+        class="bg-shamrock"
         top="SPECTRUM"
         heading="Equity"
         url="spectrum"
@@ -52,14 +50,14 @@
       />
 
       <ProjectCard
-        class="bg-grape hover:scale-[1.05] duration-[.3s]"
+        class="bg-grape"
         top="Lead Edge"
         heading="Capital"
         url="ledge"
         company="FINE Design"
-      />
+      /> -->
     </ProjectSpread>
-    <p class="font-serif huge font-light header-2 text-center py-xl">
+    <p class="font-sans huge font-light header-2 text-center py-3xl">
       “You can't blossom if you keep growing gardens out of weeds” - Beach Bunny
     </p>
   </div>

@@ -22,14 +22,20 @@
     abbv="IEM"
     heading="Industrial Electric Mfg"
     company="FINE Design"
+    url="https://www.iemfg.com/"
   >
-    <p class="text-red">
+    <p class="text-red font-bold">
       IEM's design library featured a lot of sharp edges and angular line-art.
       This fit well with IEM's primary product: industrial electric equipment.
-      My additions on the front end all looked to add movement to what otherwise
-      would be a static brochure site with a lot of repeating inventory. The
-      links in the footer have an underline drawn underneath them when hovered,
-      instead of displaying by default.
+      <br />
+      My Front-End additions to this aesthetic was adapting an existing
+      technique used to draw text underlines to the borders of many design
+      elements on the site. The site header, global footer, and some subheadings
+      on the site feature this flourish.
+      <br />Animation, especially nonintrusive ones, can help humanize a
+      website. These were unsurprisingly applied to IEM given they are all FINE
+      Design staples, but I liked particularly them being applied to IEM's
+      product lineup and aesthetic.
     </p>
   </WorkDetail>
 </template>

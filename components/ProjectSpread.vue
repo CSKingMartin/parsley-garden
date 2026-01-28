@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project-spread pb-xl py-sm flex gap-sm flex-wrap justify-center items-start relative w-screen"
+    class="project-spread pb-xl py-sm flex gap-lg md:gap-md flex-wrap justify-center items-start relative w-screen"
     v-reveal="{ deep: true }"
   >
     <slot />
@@ -8,10 +8,13 @@
 </template>
 <style lang="postcss">
 .project-spread .project-card {
+  margin: 0 var(--space-sm);
   width: 100%;
 
   @screen sm {
+    margin: 0;
     max-width: calc(50% - var(--space-sm) * 1.6);
+    transition: transform 2s ease;
   }
 
   @screen md {

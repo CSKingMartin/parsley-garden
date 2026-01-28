@@ -26,18 +26,26 @@
     abbv="GFF"
     heading="Gray Family Foundation"
     company="Studio Rover"
+    url="https://www.grayff.org/"
   >
-    <p class="text-blue">
-      When Studio Rover invited me on to help build a new site for the Gray
-      Family Foundation, I was asked to build the front-end and choose the
-      technologies to my liking. In addition to helping Studio Rover achieve
-      their design intent I architected all other front-end features like the
-      API calls, redirects, and state management.
+    <p class="text-blue font-bold">
+      Working with Studio Rover gave opportunity to start afresh on the
+      Front-End. I built the architecture for the Gray Family Foundation (GFF)
+      site from the ground up. That means in addition to helping Studio Rover
+      achieve their design intent this project required me to support features
+      like the API calls, redirects, and state management without using an
+      internal agency boilerplate.
 
       <br />
-
-      Sites like GFF are my favorite to build. The content and message of
-      whatever I'm working on impacts my feelings about the work greatly.
+      Websites like this one are among my favorites to build. GFF's service to
+      the Oregon community is inspiring, and getting to handpick technologies to
+      support their vision helps my work feel impactful and important.
+      <br />
+      When responsible for non-profit domains, the word "stewardship" comes to
+      mind often. Websites like that for the Gray Family Foundation are meant to
+      be spaces for everyone, and ensuring the Front-End carries that ethos is
+      crucial. Whether that be the simple look-and-feel of the site or its
+      accessible features.
     </p>
   </WorkDetail>
 </template>

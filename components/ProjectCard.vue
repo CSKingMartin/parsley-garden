@@ -1,16 +1,19 @@
 <template>
-  <div class="shrink project-card aspect-[.7/1]">
+  <div class="shrink project-card aspect-[.7/1] overflow-visible max-w-[375px]">
     <component :is="props.url ? NuxtLink : 'span'" :to="`/work/${props.url}`">
       <div class="text-black h-full">
         <div class="p-xs text-center flex flex-col justify-between h-full">
           <h3>
             <template v-if="top || abbv"
-              ><span class="paragraph-lg font-bold">{{ top }}{{ abbv }}</span
-              ><br
-            /></template>
-            <span class="header-4 leading-[1] uppercase font-bold">{{
-              heading
-            }}</span>
+              ><span
+                class="header-4 md:paragraph-lg font-bold leading-[1] block mb-3xs"
+                >{{ top }}{{ abbv }}</span
+              ></template
+            >
+            <span
+              class="header-2 sm:header-3 md:header-4 leading-[1] uppercase font-bold"
+              >{{ heading }}</span
+            >
           </h3>
           <div>
             <!-- <div
@@ -50,10 +53,14 @@ function onClick() {
   state.active = true;
 }
 </script>
-<style lang="postcss" scoped>
+<style lang="postcss">
 .project-card {
   /* background: var(--color-white); */
   border-radius: 4px;
+
+  a {
+    overflow: visible;
+  }
 
   /* &:hover {
     background: linear-gradient(

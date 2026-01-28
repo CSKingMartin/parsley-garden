@@ -1,10 +1,14 @@
 <template>
-  <div class="graphic-text py-xl mx-auto">
-    <h1 v-reveal="{ deep: 'true' }">
-      <span data-reveal aria-hidden>PAR</span
-      ><span data-reveal aria-hidden>SLEY</span>
-      <span data-reveal aria-hidden>GAR</span
-      ><span data-reveal aria-hidden>DEN</span>
+  <div class="graphic-text mx-auto min-h-screen flex flex-col justify-center">
+    <h1 class="flex flex-col xl:flex-row lg:gap-sm" v-reveal="{ deep: 'true' }">
+      <span
+        ><span data-reveal aria-hidden>PAR</span
+        ><span data-reveal aria-hidden>SLEY</span></span
+      >
+      <span>
+        <span data-reveal aria-hidden>GAR</span
+        ><span data-reveal aria-hidden>DEN</span>
+      </span>
       <span class="sr-only">Parsley Garden</span>
     </h1>
   </div>
