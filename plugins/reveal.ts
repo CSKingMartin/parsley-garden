@@ -5,7 +5,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("reveal", {
     beforeMount(el, binding) {
       // el.style.opacity = 0;
-      el.classList.add("opacity-0");
+      el.classList.add("reveal-init");
       let deep, delay, offset, duration;
 
       if (binding.value) {
@@ -117,6 +117,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         if (e[0] && e[0].isIntersecting) {
           setTimeout(() => {
             el.classList.remove("opacity-0");
+            el.classList.remove("reveal-init");
             el.classList.remove("reveal-children-init");
 
             // if (!deep) {
