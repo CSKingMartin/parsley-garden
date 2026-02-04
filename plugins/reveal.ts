@@ -96,14 +96,13 @@ export default defineNuxtPlugin((nuxtApp) => {
             } else {
               // node.style.transform = `translateY(${offset})`;
             }
-
-            node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
-
-            node.style.transitionDelay = `${(delay ?? 100) * index}ms`;
-            node.style.transitionDuration = `${duration}ms`;
-            nextTick(() => {
-              console.log(node);
-            });
+            node.style.opacity = "0";
+            setTimeout(() => {
+              node.style.transition = "opacity 1.5s ease, transform 1.5s ease";
+              node.style.transitionDelay = `${(delay ?? 100) * index}ms`;
+              node.style.transitionDuration = `${duration}ms`;
+            }, 200);
+            nextTick(() => {});
           }
         });
       }
@@ -127,11 +126,12 @@ export default defineNuxtPlugin((nuxtApp) => {
               if (deep) {
                 el.querySelectorAll("[data-reveal]").forEach((node, index) => {
                   if (node instanceof HTMLElement) {
-                    node.style.transitionDuration = "";
+                    // node.style.transitionDuration = "";
+                    node.style.opacity = 1;
                   }
                 });
               }
-            }, 1000);
+            }, 100);
             // }
 
             // setTimeout(() => {
