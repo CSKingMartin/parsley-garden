@@ -24,13 +24,14 @@
         alt: 'GFF  Screenshot',
       },
     ]"
-    color="blue"
+    color="sky-blue"
     abbv="GFF"
     heading="Gray Family Foundation"
     company="Studio Rover"
     url="https://www.grayff.org/"
   >
-    <p class="text-blue font-bold">
+    <div class="bg-sky-blue" />
+    <p class="text-sky-blue font-bold">
       Working with Studio Rover gave opportunity to start afresh on the
       Front-End. I built the architecture for the Gray Family Foundation (GFF)
       site from the ground up. That means in addition to helping Studio Rover
@@ -56,7 +57,7 @@ import { useGlobalStore } from "~/stores";
 
 const globalStore = useGlobalStore();
 
-globalStore.color = "blue";
+globalStore.color = "sky-blue";
 
 pageMeta({
   title: "Parsley Garden | GFF",

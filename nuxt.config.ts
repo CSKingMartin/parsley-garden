@@ -30,7 +30,7 @@ export default defineNuxtConfig({
           shamrock: "var(--color-shamrock)",
           terracotta: "var(--color-terracotta)",
           yellow: "var(--color-yellow)",
-          blue: "var(--color-blue)",
+          "sky-blue": "var(--color-sky-blue)",
           grape: "var(--color-grape)",
           camel: "var(--color-camel)",
           pink: "var(--color-pink)",

@@ -33,7 +33,7 @@
       />
 
       <ProjectCard
-        class="bg-blue"
+        class="bg-sky-blue"
         top="GFF"
         url="gff"
         heading="Gray Family Foundation"
