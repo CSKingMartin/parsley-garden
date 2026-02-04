@@ -3,6 +3,7 @@
     :class="color ? `bg-${color}` : 'bg-shamrock'"
     class="h-screen w-screen flex flex-col transition-all mt-2xl"
   >
+    <div class="bg-bold-blue" />
     <div
       class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-lg grow"
     >

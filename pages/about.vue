@@ -22,12 +22,12 @@
         alt: 'SERA Design Screenshot',
       },
     ]"
-    color="shamrock"
+    color="bold-blue"
     top="Conner"
     heading="Parsley"
     title="Front-End Web Developer and Contractor"
   >
-    <div class="font-bold">
+    <div class="font-bold text-bold-blue">
       <h1 class="uppercase font-bold font-sans header-3 mb-xs">
         About the Author
       </h1>
@@ -81,3 +81,10 @@
     </div>
   </DetailPage>
 </template>
+<script lang="ts" setup>
+import { useGlobalStore } from "~/stores";
+
+const globalStore = useGlobalStore();
+
+globalStore.color = "bold-blue";
+</script>
