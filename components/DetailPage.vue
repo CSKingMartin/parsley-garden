@@ -27,7 +27,21 @@
         </div>
       </div>
       <!-- COLUMN 2 -->
-      <div class="flex flex-col basis-[50%] items-center">Column B</div>
+      <div class="flex flex-col basis-[50%] items-center">
+        <template v-for="(image, i) in images">
+          <div
+            v-reveal
+            :class="image.landscape ? 'aspect-[4/3]' : 'aspect-[.7/1]'"
+            class="mt-lg overflow-hidden rounded-[4px] flex items-center"
+          >
+            <img
+              class="min-h-full object-cover object-center"
+              :src="image.src"
+              :alt="image.alt"
+            />
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>

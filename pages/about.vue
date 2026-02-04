@@ -2,24 +2,26 @@
   <DetailPage
     :images="[
       {
-        src: '/images/SERA_1.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/abt.jpeg',
+        alt: 'Image of King Gizzard concert.',
+      },
+      // {
+      //   src: '/images/abt1.JPG',
+      //   alt: 'Image of nature',
+      // },
+      {
+        src: '/images/abt2.jpeg',
+        alt: 'Image of cat',
+        landscape: true,
       },
       {
-        src: '/images/SERA_2.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/abt4.jpeg',
+        alt: 'Image of nature',
       },
       {
-        src: '/images/SERA_3.png',
-        alt: 'SERA Design Screenshot',
-      },
-      {
-        src: '/images/SERA_4.png',
-        alt: 'SERA Design Screenshot',
-      },
-      {
-        src: '/images/SERA_5.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/abt3.jpeg',
+        alt: 'Image of nature',
+        landscape: true,
       },
     ]"
     color="bold-blue"
