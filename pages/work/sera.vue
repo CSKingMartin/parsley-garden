@@ -2,12 +2,9 @@
   <WorkDetail
     :images="[
       {
-        src: '/images/SERA_1.png',
-        alt: 'SERA Design Screenshot',
-      },
-      {
         src: '/images/SERA_2.png',
         alt: 'SERA Design Screenshot',
+        landscape: true,
       },
       {
         src: '/images/SERA_3.png',
@@ -16,10 +13,16 @@
       {
         src: '/images/SERA_4.png',
         alt: 'SERA Design Screenshot',
+        landscape: true,
+      },
+      {
+        src: '/images/SERA_1.png',
+        alt: 'SERA Design Screenshot',
       },
       {
         src: '/images/SERA_5.png',
         alt: 'SERA Design Screenshot',
+        landscape: true,
       },
     ]"
     color="terracotta"

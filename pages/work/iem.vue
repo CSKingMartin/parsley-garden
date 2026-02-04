@@ -4,6 +4,7 @@
       {
         src: '/images/IEM_1.png',
         alt: 'IEM Website Screenshot',
+        landscape: true,
       },
       {
         src: '/images/IEM_2.png',
@@ -12,10 +13,16 @@
       {
         src: '/images/IEM_3.png',
         alt: 'IEM Website Screenshot',
+        landscape: true,
+      },
+      {
+        src: '/images/IEM_5.png',
+        alt: 'IEM Website Screenshot',
       },
       {
         src: '/images/IEM_4.png',
         alt: 'IEM Website Screenshot',
+        landscape: true,
       },
     ]"
     color="red"

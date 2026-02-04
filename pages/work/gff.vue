@@ -2,24 +2,26 @@
   <WorkDetail
     :images="[
       {
-        src: '/images/SERA_1.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/GFF_9.png',
+        alt: 'GFF  Screenshot',
       },
       {
-        src: '/images/SERA_2.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/GFF_1.png',
+        alt: 'GFF  Screenshot',
+        landscape: true,
       },
       {
-        src: '/images/SERA_3.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/GFF_5.png',
+        alt: 'GFF  Screenshot',
       },
       {
-        src: '/images/SERA_4.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/GFF_3.png',
+        alt: 'GFF  Screenshot',
+        landscape: true,
       },
       {
-        src: '/images/SERA_5.png',
-        alt: 'SERA Design Screenshot',
+        src: '/images/GFF_8.png',
+        alt: 'GFF  Screenshot',
       },
     ]"
     color="blue"

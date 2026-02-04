@@ -8,7 +8,7 @@
       and gardener. This is my collection of curated work, thoughts, and
       projects.
     </p>
-    <div class="pt-3xl pb-md">
+    <div v-reveal class="pt-3xl pb-md">
       <h2 class="font-sans font-bold header-2 text-center">
         FEATURED WORK AND PROJECTS
       </h2>
@@ -57,8 +57,9 @@
         company="FINE Design"
       /> -->
     </ProjectSpread>
-    <p class="font-sans huge font-light header-2 text-center py-3xl">
-      “You can't blossom if you keep growing gardens out of weeds” - Beach Bunny
+    <p v-reveal class="font-sans font-bold huge header-2 text-center py-3xl">
+      <em>“You can't blossom if you keep growing gardens out of weeds”</em> -
+      Beach Bunny
     </p>
   </div>
 </template>
