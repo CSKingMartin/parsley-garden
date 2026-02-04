@@ -16,7 +16,7 @@
             :top="top"
             :abbv="abbv"
             :heading="heading"
-            :company="title"
+            :tagline="title"
           />
         </div>
         <div

@@ -23,7 +23,7 @@
             class="portal rounded-full bg-black aspect-square w-3xl -translate-x-1/2 -translate-y-1/2 absolute"
           ></div>
         </div> -->
-            <p class="paragraph font-serif">with {{ company }}</p>
+            <p class="paragraph font-serif">{{ tagline }}</p>
             <div class="flex mt-xs justify-center items-center gap-3xs">
               <div class="rounded-full bg-black w-xs aspect-square"></div>
               <div class="rounded-full bg-black w-xs aspect-square"></div>
@@ -41,7 +41,7 @@ const props = defineProps<{
   top?: string;
   abbv?: string;
   heading: string;
-  company: string;
+  tagline: string;
   url?: string;
 }>();
 

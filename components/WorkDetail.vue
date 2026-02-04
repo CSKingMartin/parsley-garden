@@ -16,7 +16,7 @@
             :top="top"
             :abbv="abbv"
             :heading="heading"
-            :company="company"
+            :tagline="`With ${company}`"
           />
         </div>
         <div
