@@ -45,4 +45,9 @@ import { useGlobalStore } from "~/stores";
 const globalStore = useGlobalStore();
 
 globalStore.color = "red";
+
+pageMeta({
+  title: "Parsley Garden | IEM",
+  description: "Internet gardens built by Conner Parsley",
+});
 </script>
