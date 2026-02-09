@@ -21,7 +21,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       // switch targeting process for deep vs regular
       if (!deep) {
-        console.log("shallow");
         // el.classList.add("opacity-0");
         el.classList.add("transition-opacity");
         el.classList.add("duration-1000");
@@ -33,7 +32,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         el.style.transitionDelay = `${delay}ms`;
         // el.classList.add(`tranlate-y-[${offset}em]`);
       } else {
-        console.log("deep");
         el.classList.add("reveal-children-init");
       }
 
@@ -71,8 +69,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       let duration;
       let offset = "1rem";
       let delay = 100; // in milliseconds
-
-      console.log(binding.value);
 
       if (binding.value) {
         let { threshold: customThreshold } = binding.value;

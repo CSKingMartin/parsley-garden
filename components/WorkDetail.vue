@@ -15,7 +15,7 @@
             class="top-md max-md:mt-3xl md:mx-md max-w-[400px] md:opacity-[.3] md:mx-auto w-[105%]"
             :top="top"
             :abbv="abbv"
-            :heading="heading"
+            :bottom="bottom"
             :tagline="`With ${company}`"
           />
         </div>
@@ -24,16 +24,17 @@
           class="max-md:my-auto max-md:mt-lg relative bg-black text-panel md:p-sm md:mt-xl"
         >
           <h1 class="uppercase font-bold font-sans header-3 mb-xs">
-            {{ top }} {{ heading }}
+            {{ title }}
           </h1>
-          <slot />
+          <Block :content="body" />
+
           <div v-if="url" class="py-md flex flex-col items-start max-md:hidden">
             <a
               :style="`--button-color: ${color}`"
               :class="`bg-${color} border-${color}-500 hover:text-${color}`"
               class="button"
               :href="url"
-              >Visit {{ top }} {{ heading }}</a
+              >Visit {{ title }}</a
             >
             <button class="mt-sm underline font-bold" @click="goBack()">
               Go back!
@@ -49,10 +50,10 @@
             :class="image.landscape ? 'aspect-[4/3]' : 'aspect-[.7/1]'"
             class="mt-lg overflow-hidden rounded-[4px] flex items-center"
           >
-            <img
+            <SanityImage
               class="min-h-full object-cover object-center"
-              :src="image.src"
-              :alt="image.alt"
+              :asset-id="image.image.asset._ref"
+              auto="format"
             />
           </div>
         </template>
@@ -67,7 +68,7 @@
           :class="`bg-${color} border-${color}-500 hover:text-${color}`"
           class="button"
           :href="url"
-          >Visit {{ top }} {{ heading }}</a
+          >Visit {{ title }}</a
         >
         <button class="mt-sm underline font-bold" @click="goBack()">
           Go back!
@@ -77,19 +78,24 @@
   </div>
 </template>
 <script setup lang="ts">
+import { PortableText } from "@portabletext/vue";
+
 const props = defineProps<{
+  title: string;
   color: string;
   top?: string;
   abbv?: string;
-  heading: string;
+  bottom: string;
   company: string;
   url?: string;
+  body: Array;
   images: {
-    src: String;
-    alt: String;
+    image: string;
     landscape?: Boolean;
   }[];
 }>();
+
+console.log(props);
 
 function goBack() {
   history.back();

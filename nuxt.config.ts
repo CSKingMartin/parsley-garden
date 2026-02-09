@@ -17,7 +17,49 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
+    "@nuxtjs/sanity",
+    "nuxt-security",
+  ],
+  sanity: {
+    projectId: process.env.NUXT_SANITY_PROJECT_ID,
+    dataset: process.env.NUXT_SANITY_DATASET,
+    apiVersion: process.env.NUXT_SANITY_API_VERSION || "2025-04-01",
+  },
+  security: {
+    headers: {
+      crossOriginResourcePolicy: "cross-origin",
+      crossOriginEmbedderPolicy: "unsafe-none",
+      crossOriginOpenerPolicy: "same-origin",
+      xFrameOptions: false, // Allow framing from Sanity Studio
+      contentSecurityPolicy: {
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://cdn.sanity.io", // Allow images from Sanity CDN
+          "https://i.ytimg.com/", // Allow YouTube thumbnail images
+          "https://img.youtube.com/", // Allow YouTube thumbnail images
+        ],
+        "frame-ancestors": [
+          "'self'",
+          "https://app.sanity.io",
+          "https://www.sanity.io/",
+          "https://parsley-garden.sanity.studio/",
+          "http://localhost:*",
+        ], // Allow framing from Sanity Studio
+        "script-src": false,
+        "script-src-attr": ["'unsafe-inline'"],
+      },
+    },
+    corsHandler: {
+      allowHeaders: "*",
+      origin: [
+        `https://${process.env.NUXT_SANITY_PROJECT_ID}.apicdn.sanity.io/*`,
+      ],
+    },
+  },
   tailwindcss: {
     config: {
       theme: {

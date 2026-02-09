@@ -18,8 +18,8 @@
         class="bg-terracotta"
         top="SERA"
         url="sera"
-        heading="Architects"
-        company="FINE Design"
+        bottom="Architects"
+        tagline="with FINE Design"
         data-reveal
       />
 
@@ -27,8 +27,8 @@
         class="bg-red"
         top="IEM"
         url="iem"
-        heading="Industrial Electric Mfg"
-        company="FINE Design"
+        bottom="Industrial Electric Mfg"
+        tagline="with FINE Design"
         data-reveal
       />
 
@@ -36,8 +36,8 @@
         class="bg-sky-blue"
         top="GFF"
         url="gff"
-        heading="Gray Family Foundation"
-        company="Studio Rover"
+        bottom="Gray Family Foundation"
+        tagline="with Studio Rover"
         data-reveal
       />
 
