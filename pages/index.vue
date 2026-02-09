@@ -13,6 +13,7 @@
         FEATURED WORK AND PROJECTS
       </h2>
     </div>
+
     <ProjectSpread class="pb-3xl relative w-screen">
       <ProjectCard
         class="bg-terracotta"
