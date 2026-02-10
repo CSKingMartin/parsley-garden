@@ -1,6 +1,6 @@
 <template>
   <header class="w-full z-20 fixed">
-    <div class="max-w-container mx-auto px-lg py-xs flex justify-center">
+    <div class="max-w-container mx-auto py-xs flex justify-center">
       <NuxtLink to="/">
         <SvgLogo
           :class="`text-${color}`"
