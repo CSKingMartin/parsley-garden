@@ -28,9 +28,10 @@
         <div
           class="max-md:my-auto max-md:mt-lg relative bg-black text-panel md:p-sm md:pt-2xl"
         >
-          <div class="text-black">
+          <div v-reveal="{ deep: 'true' }" class="text-black">
             <template v-for="project in work">
               <div
+                data-reveal
                 class="rounded-t-[4px] last:rounded-b-[4px] -mt-3xs px-2xs pt-2xs pb-xs transition-all"
                 :class="`bg-${project.color} hover:text-${project.color} hover:bg-black`"
               >
