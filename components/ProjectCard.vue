@@ -4,15 +4,15 @@
       <div class="text-black h-full">
         <div class="p-xs text-center flex flex-col justify-between h-full">
           <h3>
-            <template v-if="top || abbv"
+            <template v-if="top"
               ><span
                 class="header-4 md:paragraph-lg font-bold leading-[1] block mb-3xs"
-                >{{ top }}{{ abbv }}</span
+                >{{ top }}</span
               ></template
             >
             <span
               class="header-2 sm:header-3 md:header-4 leading-[1] uppercase font-bold"
-              >{{ heading }}</span
+              >{{ bottom }}</span
             >
           </h3>
           <div>
@@ -40,7 +40,7 @@ import { NuxtLink } from "#components";
 const props = defineProps<{
   top?: string;
   abbv?: string;
-  heading: string;
+  bottom: string;
   tagline: string;
   url?: string;
 }>();
