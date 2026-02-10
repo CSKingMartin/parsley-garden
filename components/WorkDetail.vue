@@ -44,7 +44,7 @@
       </div>
       <!-- COLUMN 2 -->
       <div class="flex flex-col basis-[50%] items-center">
-        <template v-for="(image, i) in images">
+        <template v-if="images" v-for="(image, i) in images">
           <div
             v-reveal
             :class="image.landscape ? 'aspect-[4/3]' : 'aspect-[.7/1]'"

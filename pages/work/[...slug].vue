@@ -31,8 +31,6 @@ onMounted(() => {
   globalStore.color = page.value.color;
 });
 
-console.log(page.value.images);
-
 pageMeta({
   title: `${page.value.title} | Parsley Garden`,
   description: "Internet gardens built by Conner Parsley",
