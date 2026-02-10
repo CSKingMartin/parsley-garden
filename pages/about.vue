@@ -88,10 +88,12 @@ import { useGlobalStore } from "~/stores";
 
 const globalStore = useGlobalStore();
 
-globalStore.color = "bold-blue";
+onMounted(() => {
+  globalStore.color = "bold-blue";
+});
 
 pageMeta({
-  title: "Parsley Garden | About",
+  title: "About | Parsley Garden",
   description: "Internet gardens built by Conner Parsley",
 });
 </script>

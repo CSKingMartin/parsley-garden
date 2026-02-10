@@ -1,8 +1,22 @@
 import { defineQuery } from "groq";
 
 export const allWorkQuery = defineQuery(/* groq */ `
-	*[_type == "work"] | order(title desc) {
+	*[_type == "work" && !hidden] | order(year desc) {
 		...
+	}
+`);
+
+export const featuredWorkQuery = defineQuery(/* groq */ `
+	*[_type == "work" && !hidden && featured] {
+		title,
+		slug,
+		color,
+		cardTop,
+		cardBottom,
+		company->{
+			title,
+			url,
+		}
 	}
 `);
 

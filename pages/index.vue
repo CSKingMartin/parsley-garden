@@ -15,48 +15,20 @@
     </div>
     <ProjectSpread class="pb-3xl relative w-screen">
       <ProjectCard
-        class="bg-terracotta"
-        top="SERA"
-        url="sera"
-        bottom="Architects"
-        tagline="with FINE Design"
+        v-for="project in featuredWork"
+        :class="`bg-${project.color}`"
+        :top="project.cardTop"
+        :bottom="project.cardBottom"
+        :url="project.slug.current"
+        :tagline="`with ${project.company.title}`"
         data-reveal
       />
-
-      <ProjectCard
-        class="bg-red"
-        top="IEM"
-        url="iem"
-        bottom="Industrial Electric Mfg"
-        tagline="with FINE Design"
-        data-reveal
-      />
-
-      <ProjectCard
-        class="bg-sky-blue"
-        top="GFF"
-        url="gff"
-        bottom="Gray Family Foundation"
-        tagline="with Studio Rover"
-        data-reveal
-      />
-
-      <!-- <ProjectCard
-        class="bg-shamrock"
-        top="SPECTRUM"
-        heading="Equity"
-        url="spectrum"
-        company="FINE Design"
-      />
-
-      <ProjectCard
-        class="bg-grape"
-        top="Lead Edge"
-        heading="Capital"
-        url="ledge"
-        company="FINE Design"
-      /> -->
     </ProjectSpread>
+    <NuxtLink
+      class="button bg-sky-blue border-sky-blue-500 hover:text-sky-blue hover:bg-black"
+      to="/work"
+      >See more work
+    </NuxtLink>
     <p v-reveal class="font-sans font-bold huge header-2 text-center py-3xl">
       <em>“You can't blossom if you keep growing gardens out of weeds”</em> -
       Beach Bunny
@@ -64,7 +36,10 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { featuredWorkQuery } from "~/sanity/queries";
 import { useGlobalStore } from "~/stores";
+
+const { data: featuredWork } = await useSanityQuery(featuredWorkQuery);
 
 const globalStore = useGlobalStore();
 

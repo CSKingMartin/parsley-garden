@@ -12,7 +12,7 @@ const globalStore = useGlobalStore();
 const { data: work } = await useSanityQuery(allWorkQuery);
 
 onMounted(() => {
-  globalStore.color = "grape";
+  globalStore.color = "sky-blue";
 });
 
 pageMeta({
