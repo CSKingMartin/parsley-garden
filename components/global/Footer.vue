@@ -5,7 +5,7 @@
   >
     <div class="bg-bold-blue" />
     <div
-      class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-lg grow"
+      class="flex flex-col items-end text-black header-3 uppercase font-bold relative p-sm md:p-lg grow"
     >
       <NuxtLink class="z-30" to="/">Home</NuxtLink>
       <NuxtLink to="/work">Work</NuxtLink>

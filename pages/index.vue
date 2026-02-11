@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <GraphicText />
+    <GraphicText class="max-md:mt-md" />
     <p v-reveal class="font-sans header-4 font-bold text-center pt-lg pb-3xl">
       The Internet has grown into a vast, deep, and tangled web. Here is a place
       to rest your feet! This site is to be a zen garden; the free space on the
@@ -13,7 +13,7 @@
         FEATURED WORK AND PROJECTS
       </h2>
     </div>
-    <ProjectSpread class="pb-3xl relative w-screen">
+    <ProjectSpread class="pb-3xl relative">
       <ProjectCard
         v-for="project in featuredWork"
         :class="`bg-${project.color}`"
